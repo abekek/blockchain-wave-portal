@@ -153,7 +153,7 @@ export default function App() {
         </div>
 
         <div className="bio">
-        I am Alibek, an undergrad @Lehigh studying CSB. Connect your Ethereum wallet and wave at me!
+          I am <a href="https://github.com/abekek">Alibek</a>! Connect your Ethereum MetaMask (Rinkeby Test Network) wallet and wave at me with any message!
         </div>
 
         <br></br>
