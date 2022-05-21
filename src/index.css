@@ -11,3 +11,18 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  textarea[type=text]{
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:5px;
+    resize: vertical;
+    width:100%;
+    height:150px;
+    font-size:1.2rem;
+    color: #000;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+    box-sizing : border-box;
+  }

@@ -32,3 +32,15 @@
     border-radius: 5px;
     
   }
+
+  .waveButton:hover {
+    background-color: #f0f0f0;
+  }
+
+  .waveButton:active {
+    background-color: #e0e0e0;
+  }
+
+  .waveButton:focus {
+    outline: none;
+  }

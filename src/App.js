@@ -6,6 +6,7 @@ import abi from "./utils/WavePortal.json";
 export default function App() {
 
   const [allWaves, setAllWaves] = useState([]);
+  const [message, setMessage] = useState("Hi!");
   const [currentAccount, setCurrentAccount] = useState("");
   const [countWaves, setCountWaves] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -114,7 +115,7 @@ export default function App() {
         /*
         * Execute the actual wave from your smart contract
         */
-        const waveTxn = await wavePortalContract.wave("this is a message");
+        const waveTxn = await wavePortalContract.wave(message);
         console.log("Mining...", waveTxn.hash);
 
         setLoading(true);
@@ -155,9 +156,7 @@ export default function App() {
         I am Alibek, an undergrad @Lehigh studying CSB. Connect your Ethereum wallet and wave at me!
         </div>
 
-        <button className="waveButton" onClick={wave}>
-          Wave at Me
-        </button>
+        <br></br>
 
         {/*
         * If there is no currentAccount render this button
@@ -167,6 +166,23 @@ export default function App() {
             Connect Wallet
           </button>
         )}
+
+        {currentAccount && (
+          <form>
+            <textarea 
+              type="text"
+              className="input"
+              contentEditable={true}
+              onChange={(e) => setMessage(e.target.value)}
+              suppressContentEditableWarning={true}
+              placeholder="Enter your message" 
+              size="50" required />
+          </form>
+        )}
+
+        <button onClick={wave} className="waveButton">
+          Wave at Me
+        </button>
 
         {loading && (
           <div className="bio">
@@ -184,7 +200,7 @@ export default function App() {
               <div>Time: {wave.timestamp.toString()}</div>
               <div>Message: {wave.message}</div>
             </div>)
-        })}
+        }).reverse()}
       </div>
     </div>
   );
