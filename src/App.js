@@ -10,7 +10,7 @@ export default function App() {
   const [currentAccount, setCurrentAccount] = useState("");
   const [countWaves, setCountWaves] = useState(0);
   const [loading, setLoading] = useState(false);
-  const contractAddress = "0xC1F5453235772e324f10edAC93a5A627628E3a35";
+  const contractAddress = "0xC4A9B52b363fe14Ece74D390F7aa7151df9B6bf3";
   const contractABI = abi.abi;
 
   const checkIfWalletIsConnected = async () => {
@@ -154,6 +154,7 @@ export default function App() {
 
         <div className="bio">
           I am <a href="https://github.com/abekek">Alibek</a>! Connect your Ethereum MetaMask (Rinkeby Test Network) wallet and wave at me with any message!
+          There is a 30% chance you will win 0.0001 ETH! You can wave once every 2 minutes.
         </div>
 
         <br></br>
